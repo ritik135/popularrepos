@@ -1,0 +1,6 @@
+Django
+djangorestframework
+djangorestframework-jwt
+djangorestframework-simplejwt
+requests
+selenium
