@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 import time
 
-newPath = "C:\Program Files\chromedriver.exe"
+new_path = "C:\Program Files\chromedriver.exe"
 
 
 def __init__(self):
@@ -17,38 +17,43 @@ def __init__(self):
 globalContAndCommit = []
 
 
-def my_function2(listOfRepo,total_contributors):
+def get_contrib_list(driver, list_of_repo, total_contributors):
     try:
-        driver = webdriver.Chrome(newPath)
-    except:
-        driver = webdriver.Chrome(newPath)
-
-    try:
-        for link in listOfRepo:
+        for link in list_of_repo:
             driver.get(link['repo-link'])
             print("link opened")
             time.sleep(5)
 
             WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.PARTIAL_LINK_TEXT, 'Contributors'))).click()
             print('contributor link opened')
+            time.sleep(10)
 
+            contrib_list = WebDriverWait(driver, 10).until(
+                EC.presence_of_all_elements_located((By.CLASS_NAME, 'contrib-person')))
+            total_contrib = contrib_list[-1].find_element_by_class_name('text-normal')
+            print('total number of contrib = ', total_contrib.text)
+            for contrib in contrib_list:
+                a = contrib.find_elements_by_tag_name('a')
+                print(a[1].text)    # contrib name
+                print(a[-1].text)   # contrib commit count
 
-
+            time.sleep(5)
     except:
         traceback.print_exc()
 
 
 def init_driver():
     try:
-        driver = webdriver.Chrome(newPath)
+        driver = webdriver.Chrome(new_path)
     except:
-        driver = webdriver.Chrome(newPath)
+        driver = webdriver.Firefox(executable_path='geckodriver.exe')
+
     try:
         driver.get("https://github.com/")
-        listofrepo = []
-        noOfRepo = 10
-        noOfcontributors = 1
-        counterForRepo = 0
+        list_of_repo = []
+        no_of_repo = 10
+        no_of_contributors = 1
+        counter_for_repo = 0
         search = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "js-site-search-form")))
         search_field = search.find_element_by_class_name("js-site-search-focus")
         search_field.send_keys("org:google")
@@ -68,29 +73,29 @@ def init_driver():
         org_repo_list = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "repo-list")))
         repo_list = org_repo_list.find_elements_by_tag_name("li")
         for li in repo_list:
-            if counterForRepo == noOfRepo:
+            if counter_for_repo == no_of_repo:
                 break
 
             repo = li.find_element_by_class_name("text-normal")
             a = repo.find_element_by_tag_name('a')
-            pairOfRepoAndLink = {
+            pair_of_repo_and_link = {
                 'repo-name': repo.text,
                 'repo-link': a.get_attribute("href")
             }
-            listofrepo.append(pairOfRepoAndLink)
-            counterForRepo = counterForRepo + 1
+            list_of_repo.append(pair_of_repo_and_link)
+            counter_for_repo = counter_for_repo + 1
 
         time.sleep(10)
 
-        pageNumber = 1
+        page_number = 1
 
         while True:
-            if counterForRepo == noOfRepo:
+            if counter_for_repo == no_of_repo:
                 break
-            pageNumber = pageNumber + 1
+            page_number = page_number + 1
             next_page = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "next_page")))
             next_page.click()
-            print('+++++++++++++ Page', pageNumber, '++++++++++++++')
+            print('+++++++++++++ Page', page_number, '++++++++++++++')
 
             time.sleep(10)
 
@@ -98,20 +103,20 @@ def init_driver():
                 EC.presence_of_element_located((By.CLASS_NAME, "repo-list")))
             repo_list = org_repo_list.find_elements_by_tag_name("li")
             for li in repo_list:
-                if counterForRepo == noOfRepo:
+                if counter_for_repo == no_of_repo:
                     break
                 repo = li.find_element_by_class_name("text-normal")
                 a = repo.find_element_by_tag_name('a')
-                pairOfRepoAndLink = {
+                pair_of_repo_and_link = {
                     'repo-name': repo.text,
                     'repo-link': a.get_attribute("href")
                 }
-                listofrepo.append(pairOfRepoAndLink)
-                counterForRepo = counterForRepo + 1
+                list_of_repo.append(pair_of_repo_and_link)
+                counter_for_repo = counter_for_repo + 1
 
-        # print(listofrepo)
-        print(len(listofrepo))
-        my_function2(listofrepo, noOfcontributors)
+        # print(list_of_repo)
+        print(len(list_of_repo))
+        get_contrib_list(driver, list_of_repo, no_of_contributors)
     except:
         traceback.print_exc()
 
