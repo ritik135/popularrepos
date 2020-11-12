@@ -17,9 +17,11 @@ def __init__(self):
 globalContAndCommit = []
 
 
-def get_contrib_list(driver, list_of_repo, total_contributors):
+def get_contrib_list(driver, list_of_repos, total_contributors):
     try:
-        for link in list_of_repo:
+        popular_repos = []
+        for link in list_of_repos:
+            contributors_and_commit = []
             driver.get(link['repo-link'])
             print("link opened")
             time.sleep(5)
@@ -34,15 +36,19 @@ def get_contrib_list(driver, list_of_repo, total_contributors):
             print('total number of contrib = ', total_contrib.text)
             for contrib in contrib_list:
                 a = contrib.find_elements_by_tag_name('a')
+                contributors_and_commit.append({'contributor': a[1].text, 'commits': a[-1].text})
                 print(a[1].text)    # contrib name
                 print(a[-1].text)   # contrib commit count
-
+            popular_repos.append({"repository": link['repo-name'].split('/', 1)[1],
+                                  "contributers_&_commits": contributors_and_commit})
             time.sleep(5)
+        return popular_repos
     except:
         traceback.print_exc()
+        return []
 
 
-def init_driver():
+def init_driver(org, no_of_repos, no_of_contributors):
     try:
         driver = webdriver.Chrome(new_path)
     except:
@@ -50,13 +56,12 @@ def init_driver():
 
     try:
         driver.get("https://github.com/")
+        driver.maximize_window()
         list_of_repo = []
-        no_of_repo = 10
-        no_of_contributors = 1
         counter_for_repo = 0
         search = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "js-site-search-form")))
         search_field = search.find_element_by_class_name("js-site-search-focus")
-        search_field.send_keys("org:google")
+        search_field.send_keys(org)
         search_field.send_keys(Keys.ENTER)
 
         dropdown = WebDriverWait(driver, 10).until(
@@ -73,7 +78,7 @@ def init_driver():
         org_repo_list = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "repo-list")))
         repo_list = org_repo_list.find_elements_by_tag_name("li")
         for li in repo_list:
-            if counter_for_repo == no_of_repo:
+            if counter_for_repo == no_of_repos:
                 break
 
             repo = li.find_element_by_class_name("text-normal")
@@ -90,7 +95,7 @@ def init_driver():
         page_number = 1
 
         while True:
-            if counter_for_repo == no_of_repo:
+            if counter_for_repo == no_of_repos:
                 break
             page_number = page_number + 1
             next_page = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "next_page")))
@@ -103,7 +108,7 @@ def init_driver():
                 EC.presence_of_element_located((By.CLASS_NAME, "repo-list")))
             repo_list = org_repo_list.find_elements_by_tag_name("li")
             for li in repo_list:
-                if counter_for_repo == no_of_repo:
+                if counter_for_repo == no_of_repos:
                     break
                 repo = li.find_element_by_class_name("text-normal")
                 a = repo.find_element_by_tag_name('a')
@@ -114,14 +119,12 @@ def init_driver():
                 list_of_repo.append(pair_of_repo_and_link)
                 counter_for_repo = counter_for_repo + 1
 
-        # print(list_of_repo)
-        print(len(list_of_repo))
-        get_contrib_list(driver, list_of_repo, no_of_contributors)
+        repo_list = get_contrib_list(driver, list_of_repo, no_of_contributors)
+        driver.quit()
+        return repo_list
     except:
         traceback.print_exc()
-
-    driver.maximize_window()
-    driver.quit()
+        driver.quit()
 
 
 # def get_popular_repos():
