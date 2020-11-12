@@ -921,3 +921,144 @@ JavaScript error: https://github.githubassets.com/assets/environment-f0adafbf.js
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1605203651266	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jakhe\\AppData\\Local\\Temp\\rust_mozprofile.oDI2ElAea5gK"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605203676377	Marionette	INFO	Listening on port 61866
+1605203677841	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://github.githubassets.com/assets/environment-f0adafbf.js, line 1: Error: could not resolve ./chunk-jump-to.js, error loading the module
+1605203931571	Marionette	INFO	Stopped listening on port 61866
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1605206867450	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jakhe\\AppData\\Local\\Temp\\rust_mozprofile.c84LzlIJXW0S"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605206873771	Marionette	INFO	Listening on port 62089
+1605206873821	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1605207113662	Marionette	INFO	Stopped listening on port 62089
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1605207439063	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jakhe\\AppData\\Local\\Temp\\rust_mozprofile.syzqjCVp41qF"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605207444428	Marionette	INFO	Listening on port 62216
+1605207444820	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://github.githubassets.com/assets/environment-f0adafbf.js, line 1: Error: could not resolve ./chunk-jump-to.js, error loading the module
+1605207532423	Marionette	INFO	Stopped listening on port 62216
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1605207694163	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jakhe\\AppData\\Local\\Temp\\rust_mozprofile.CHAaTwtRGSlA"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605207699745	Marionette	INFO	Listening on port 62339
+1605207699929	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://github.githubassets.com/assets/environment-f0adafbf.js, line 1: Error: could not resolve ./chunk-jump-to.js, error loading the module
+1605207772022	Marionette	INFO	Stopped listening on port 62339
+[Parent 23196, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1605207907773	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jakhe\\AppData\\Local\\Temp\\rust_mozprofile.TbrzZ9KTmWg9"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605207912887	Marionette	INFO	Listening on port 62495
+1605207913027	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://github.githubassets.com/assets/environment-f0adafbf.js, line 1: Error: could not resolve ./chunk-jump-to.js, error loading the module
+1605207984817	Marionette	INFO	Stopped listening on port 62495
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1605208189081	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jakhe\\AppData\\Local\\Temp\\rust_mozprofile.tPgC30GtPJ6K"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605208194766	Marionette	INFO	Listening on port 62645
+1605208194861	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://github.githubassets.com/assets/environment-f0adafbf.js, line 1: Error: could not resolve ./chunk-jump-to.js, error loading the module
+JavaScript error: https://github.githubassets.com/assets/chunk-frameworks-604b6c85.js, line 1: AbortError: The operation was aborted. 
+JavaScript error: chrome://marionette/content/proxy.js, line 218: TypeError: this.browser.driver.dialogObserver is null
+JavaScript error: chrome://marionette/content/proxy.js, line 218: TypeError: this.browser.driver.dialogObserver is null
+1605208654314	Marionette	INFO	Stopped listening on port 62645
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1605208683773	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jakhe\\AppData\\Local\\Temp\\rust_mozprofile.3ATvq3KDvuZ6"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605208690032	Marionette	INFO	Listening on port 63793
+1605208690151	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://github.githubassets.com/assets/environment-f0adafbf.js, line 1: Error: could not resolve ./chunk-jump-to.js, error loading the module
+1605208937534	Marionette	INFO	Stopped listening on port 63793
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1605209337639	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jakhe\\AppData\\Local\\Temp\\rust_mozprofile.McMGQlDCATjF"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605209343592	Marionette	INFO	Listening on port 64021
+1605209343905	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://github.githubassets.com/assets/environment-f0adafbf.js, line 1: Error: could not resolve ./chunk-jump-to.js, error loading the module
+1605209535119	Marionette	INFO	Stopped listening on port 64021
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1605209803597	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jakhe\\AppData\\Local\\Temp\\rust_mozprofile.wrqYLVmfHSBE"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605209809278	Marionette	INFO	Listening on port 64214
+1605209809361	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://github.githubassets.com/assets/environment-f0adafbf.js, line 1: Error: could not resolve ./chunk-jump-to.js, error loading the module
+1605209971604	Marionette	INFO	Stopped listening on port 64214
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
